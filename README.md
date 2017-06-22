@@ -256,7 +256,7 @@ Show all active subscriptions for this user.
 | Field       | Type       | Description
 |-------------|------------|----------
 | accessToken | credentials| Your application's access token.
-| resourceName| String     | Currently the only supported value is sale.
+| resourceName| String     | Currently the only supported value is ```sale```.
 
 ## Gumroad.subscribeToResource
 Subscribe to a resource. Currently the only supported resource name is `sale`. Once subscribed you will be notified of the user's sales with an HTTP POST to your post_url.
@@ -264,7 +264,7 @@ Subscribe to a resource. Currently the only supported resource name is `sale`. O
 | Field       | Type       | Description
 |-------------|------------|----------
 | accessToken | credentials| Your application's access token.
-| resourceName| String     | Currently the only supported value is sale.
+| resourceName| String     | Currently the only supported value is ```sale```.
 | postUrl     | String     | URL for notifications
 
 ## Gumroad.unsubscribeFromResource
