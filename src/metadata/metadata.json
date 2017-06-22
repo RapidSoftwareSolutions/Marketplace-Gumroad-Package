@@ -1,7 +1,7 @@
 {
   "package": "Gumroad",
   "tagline": "Gumroad API",
-  "description": "",
+  "description": "Gumroad helps creators take control of their creative careers. The Gumroad OAuth API is based around REST. We return JSON for every request, including errors.",
   "image": "https://logo.clearbit.com/gumroad.com",
   "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Gumroad-Package",
   "keywords": [
