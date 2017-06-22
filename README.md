@@ -183,7 +183,7 @@ Create a new offer code for a product. Default offer code is in cents. A univers
 | id              | String     | Id of the product.
 | name            | String     | Offer name.
 | amountOff       | String     | Amount value.
-| offerType       | Select     | cents or percent
+| offerType       | Select     | ```cents``` or ```percent```
 | maxPurchaseCount| String     | Max purchase count
 | universal       | Boolean    | true or false
 
@@ -276,7 +276,7 @@ Unsubscribe from a resource.
 | resourceSubscriptionId| String     | Id of subscription resource.
 
 ## Gumroad.getUserSucessfulSales
-Retrieves all of the sucessful sales by the authenticated user. Available with the 'view_sales' scope.
+Retrieves all of the sucessful sales by the authenticated user. Available with the ```view_sales``` scope.
 
 | Field      | Type       | Description
 |------------|------------|----------
@@ -286,7 +286,7 @@ Retrieves all of the sucessful sales by the authenticated user. Available with t
 | page       | Number     | Return this page of results.
 
 ## Gumroad.getUserSingleSale
-Retrieves the details of a sale by this user. Available with the 'view_sales' scope.
+Retrieves the details of a sale by this user. Available with the ```view_sales``` scope.
 
 | Field      | Type       | Description
 |------------|------------|----------
@@ -294,7 +294,7 @@ Retrieves the details of a sale by this user. Available with the 'view_sales' sc
 | saleId     | String     | Id of user sale.
 
 ## Gumroad.getProductActiveSubscribers
-Retrieves all of the active subscribers for one of the authenticated user's products. Available with the 'view_sales' scope.
+Retrieves all of the active subscribers for one of the authenticated user's products. Available with the ```view_sales``` scope.
 
 | Field      | Type       | Description
 |------------|------------|----------
@@ -302,7 +302,7 @@ Retrieves all of the active subscribers for one of the authenticated user's prod
 | id         | String     | Id of the product.
 
 ## Gumroad.getProductSingleSubscriber
-Retrieves the details of a subscriber to this user's product. Available with the 'view_sales' scope.
+Retrieves the details of a subscriber to this user's product. Available with the ```view_sales``` scope.
 
 | Field       | Type       | Description
 |-------------|------------|----------
