@@ -1,0 +1,1067 @@
+{
+  "package": "Gumroad",
+  "tagline": "Gumroad API",
+  "description": "",
+  "image": "https://logo.clearbit.com/gumroad.com",
+  "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Gumroad-Package",
+  "keywords": [
+    "API",
+    "gumroad"
+  ],
+  "accounts": {
+    "domain": "gumroad.com",
+    "credentials": [
+      "accessToken"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "getUserProducts",
+      "description": "Retrieve all of the existing products for the authenticated user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getSingleProduct",
+      "description": "Retrieve the details of a product.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "deleteSingleProduct",
+      "description": "Permanently delete a product.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "enableSingleProduct",
+      "description": "Enable an existing product.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "disableSingleProduct",
+      "description": "Disable an existing product.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "createProductVariantCategory",
+      "description": "Create a new variant category on a product.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "Variant category name.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getProductSingleVariantCategory",
+      "description": "Retrieve the details of a variant category of a product.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        },
+        {
+          "name": "categoryId",
+          "type": "String",
+          "info": "Variant category id.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "updateProductVariantCategory",
+      "description": "Edit a variant category of an existing product.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        },
+        {
+          "name": "categoryId",
+          "type": "String",
+          "info": "Variant category id.",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "Variant category name.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "deleteProductVariantCategory",
+      "description": "Permanently delete a variant category of a product.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        },
+        {
+          "name": "categoryId",
+          "type": "String",
+          "info": "Variant category id.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getProductVariantCategories",
+      "description": "Retrieve all of the existing variant categories of a product.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "createProductVariant",
+      "description": "Create a new variant of a product.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        },
+        {
+          "name": "categoryId",
+          "type": "String",
+          "info": "Variant category id.",
+          "required": true
+        },
+        {
+          "name": "categoryId",
+          "type": "String",
+          "info": "Variant category id.",
+          "required": true
+        },
+        {
+          "name": "priceDifferenceCents",
+          "type": "Number",
+          "info": "Price difference cents.",
+          "required": true
+        },
+        {
+          "name": "maxPurchaseCount",
+          "type": "Number",
+          "info": "Max purchase count.",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getSingleProductVariant",
+      "description": "Retrieve the details of a variant of a product.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        },
+        {
+          "name": "categoryId",
+          "type": "String",
+          "info": "Variant category id.",
+          "required": true
+        },
+        {
+          "name": "categoryId",
+          "type": "String",
+          "info": "Variant category id.",
+          "required": true
+        },
+        {
+          "name": "variantId",
+          "type": "String",
+          "info": "Variant id.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "updateProductVariant",
+      "description": "Edit a variant of an existing product.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        },
+        {
+          "name": "categoryId",
+          "type": "String",
+          "info": "Variant category id.",
+          "required": true
+        },
+        {
+          "name": "categoryId",
+          "type": "String",
+          "info": "Variant category id.",
+          "required": true
+        },
+        {
+          "name": "variantId",
+          "type": "String",
+          "info": "Variant id.",
+          "required": true
+        },
+        {
+          "name": "priceDifferenceCents",
+          "type": "Number",
+          "info": "Price difference cents.",
+          "required": true
+        },
+        {
+          "name": "maxPurchaseCount",
+          "type": "Number",
+          "info": "Max purchase count.",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "deleteProductVariant",
+      "description": "Permanently delete a variant of a product.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        },
+        {
+          "name": "categoryId",
+          "type": "String",
+          "info": "Variant category id.",
+          "required": true
+        },
+        {
+          "name": "categoryId",
+          "type": "String",
+          "info": "Variant category id.",
+          "required": true
+        },
+        {
+          "name": "variantId",
+          "type": "String",
+          "info": "Variant id.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getVariantsInVariantCategory",
+      "description": "Retrieve all of the existing variants in a variant category.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        },
+        {
+          "name": "categoryId",
+          "type": "String",
+          "info": "Variant category id.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getProductOfferCodes",
+      "description": "Retrieve all of the existing offer codes for a product. Either amount_cents or percent_off will be returned depending if the offer code is a fixed amount off or a percentage off. A universal offer code is one that applies to all products.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getSingleProductOfferCode",
+      "description": "Retrieve the details of a specific offer code of a product.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        },
+        {
+          "name": "offerId",
+          "type": "String",
+          "info": "Offer code id.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "createProductOfferCode",
+      "description": "Create a new offer code for a product. Default offer code is in cents. A universal offer code is one that applies to all products.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "Offer name.",
+          "required": true
+        },
+        {
+          "name": "amountOff",
+          "type": "String",
+          "info": "Amount value.",
+          "required": true
+        },
+        {
+          "name": "offerType",
+          "type": "Select",
+          "options": ["cents","percent"],
+          "info": "cents or percent",
+          "required": false
+        },
+        {
+          "name": "maxPurchaseCount",
+          "type": "String",
+          "info": "Max purchase count",
+          "required": false
+        },
+        {
+          "name": "universal",
+          "type": "Boolean",
+          "info": "true or false",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "updateProductOfferCode",
+      "description": "Edit an existing product's offer code.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        },
+        {
+          "name": "offerId",
+          "type": "String",
+          "info": "Offer code id.",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "Offer name.",
+          "required": true
+        },
+        {
+          "name": "amountOff",
+          "type": "String",
+          "info": "Amount value.",
+          "required": true
+        },
+        {
+          "name": "offerType",
+          "type": "Select",
+          "options": ["cents","percent"],
+          "info": "cents or percent",
+          "required": false
+        },
+        {
+          "name": "maxPurchaseCount",
+          "type": "String",
+          "info": "Max purchase count",
+          "required": false
+        },
+        {
+          "name": "universal",
+          "type": "Boolean",
+          "info": "true or false",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "deleteProductOfferCode",
+      "description": "Edit an existing product's offer code.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        },
+        {
+          "name": "offerId",
+          "type": "String",
+          "info": "Offer code id.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getProductCustomFields",
+      "description": "Retrieve all of the existing custom fields for a product.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "createProductCustomField",
+      "description": "Create a new custom field for a product.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "Field name.",
+          "required": true
+        },
+        {
+          "name": "required",
+          "type": "Boolean",
+          "info": "true or false.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "updateProductCustomField",
+      "description": "Edit an existing product's custom field.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "Field name.",
+          "required": true
+        },
+        {
+          "name": "newName",
+          "type": "String",
+          "info": "Field name.",
+          "required": true
+        },
+        {
+          "name": "required",
+          "type": "Boolean",
+          "info": "true or false.",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "deleteProductCustomField",
+      "description": "Edit an existing product's custom field.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "Field name.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUser",
+      "description": "Retrieve the user's data.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserSubscriptions",
+      "description": "Show all active subscriptions for this user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "resourceName",
+          "type": "String",
+          "info": "Currently the only supported value is sale.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "subscribeToResource",
+      "description": "Subscribe to a resource. Currently the only supported resource name is `sale`. Once subscribed you will be notified of the user's sales with an HTTP POST to your post_url.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "resourceName",
+          "type": "String",
+          "info": "Currently the only supported value is sale.",
+          "required": true
+        },
+        {
+          "name": "postUrl",
+          "type": "String",
+          "info": "URL for notifications",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "unsubscribeFromResource",
+      "description": "Unsubscribe from a resource.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "resourceSubscriptionId",
+          "type": "String",
+          "info": "Id of subscription resource.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserSucessfulSales",
+      "description": "Retrieves all of the sucessful sales by the authenticated user. Available with the 'view_sales' scope.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "after",
+          "type": "DatePicker",
+          "info": "Only return sales after this date.",
+          "required": true
+        },
+        {
+          "name": "before",
+          "type": "DatePicker",
+          "info": "Only return sales before this date.",
+          "required": true
+        },
+        {
+          "name": "page",
+          "type": "DatePicker",
+          "info": "Return this page of results.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserSingleSale",
+      "description": "Retrieves the details of a sale by this user. Available with the 'view_sales' scope.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "saleId",
+          "type": "String",
+          "info": "Id of user sale.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getProductActiveSubscribers",
+      "description": "Retrieves all of the active subscribers for one of the authenticated user's products. Available with the 'view_sales' scope.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of the product.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getProductSingleSubscriber",
+      "description": "Retrieves the details of a subscriber to this user's product. Available with the 'view_sales' scope.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's access token.",
+          "required": true
+        },
+        {
+          "name": "subscriberId",
+          "type": "String",
+          "info": "Id of the subscriber.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    }
+  ]
+}
