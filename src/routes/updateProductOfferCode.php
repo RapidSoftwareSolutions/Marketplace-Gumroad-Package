@@ -14,18 +14,6 @@ $app->post('/api/Gumroad/updateProductOfferCode', function ($request, $response)
 
     $data['access_token'] = $post_data['args']['accessToken'];
 
-    if(!empty($post_data['args']['name'])) {
-        $data['name'] = $post_data['args']['name'];
-    }
-    if(!empty($post_data['args']['amount_off'])) {
-        $data['amount_off'] = $post_data['args']['amount_off'];
-    }
-    if(!empty($post_data['args']['offer_type'])) {
-        $data['offerType'] = $post_data['args']['offer_type'];
-    }
-    if(!empty($post_data['args']['universal'])) {
-        $data['universal'] = $post_data['args']['universal'];
-    }
     if(isset($post_data['args']['maxPurchaseCount'])) {
         $data['max_purchase_count'] = $post_data['args']['maxPurchaseCount'];
     }
@@ -38,7 +26,7 @@ $app->post('/api/Gumroad/updateProductOfferCode', function ($request, $response)
 
     try {
 
-        $resp = $client->post($query_str, [
+        $resp = $client->put($query_str, [
             'query' => $data
         ]);
         $responseBody = $resp->getBody()->getContents();

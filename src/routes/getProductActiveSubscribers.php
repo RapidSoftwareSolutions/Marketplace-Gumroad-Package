@@ -15,7 +15,7 @@ $app->post('/api/Gumroad/getProductActiveSubscribers', function ($request, $resp
     $data['access_token'] = $post_data['args']['accessToken'];
     $id = $post_data['args']['id'];
 
-    $query_str = $settings['api_url'] . "sales/$id/subscribers";
+    $query_str = $settings['api_url'] . "products/$id/subscribers";
     $client = $this->httpClient;
 
     try {

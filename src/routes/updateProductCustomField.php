@@ -4,7 +4,7 @@ $app->post('/api/Gumroad/updateProductCustomField', function ($request, $respons
 
     $settings = $this->settings;
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['accessToken','id','name','newName','required']);
+    $validateRes = $checkRequest->validate($request, ['accessToken','id','name','required']);
 
     if(!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback']=='error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
@@ -13,7 +13,6 @@ $app->post('/api/Gumroad/updateProductCustomField', function ($request, $respons
     }
 
     $data['access_token'] = $post_data['args']['accessToken'];
-    $data['name'] = $post_data['args']['newName'];
     $data['required'] = $post_data['args']['required'];
 
     $id = $post_data['args']['id'];

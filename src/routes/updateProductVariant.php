@@ -4,7 +4,7 @@ $app->post('/api/Gumroad/updateProductVariant', function ($request, $response) {
 
     $settings = $this->settings;
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['accessToken','id','categoryId','variantId','name','priceDifferenceCents']);
+    $validateRes = $checkRequest->validate($request, ['accessToken','id','categoryId','variantId']);
 
     if(!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback']=='error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
@@ -13,17 +13,24 @@ $app->post('/api/Gumroad/updateProductVariant', function ($request, $response) {
     }
 
     $data['access_token'] = $post_data['args']['accessToken'];
-    $data['name'] = $post_data['args']['name'];
-    $data['price_difference_cents'] = $post_data['args']['priceDifferenceCents'];
 
-    if(isset($post_data['args']['maxPurchaseCount'])){
+    if(!empty($post_data['args']['name'])){
+        $data['name'] = $post_data['args']['name'];
+    }
+
+    if(!empty($post_data['args']['priceDifferenceCents'])){
+        $data['price_difference_cents'] = $post_data['args']['priceDifferenceCents'];
+    }
+
+    if(!empty($post_data['args']['maxPurchaseCount'])){
         $data['max_purchase_count'] = $post_data['args']['maxPurchaseCount'];
     }
 
     $id = $post_data['args']['id'];
     $catId = $post_data['args']['categoryId'];
+    $variantId = $post_data['args']['variantId'];
 
-    $query_str = $settings['api_url'] . "products/$id/variant_categories/$catId/variants";
+    $query_str = $settings['api_url'] . "products/$id/variant_categories/$catId/variants/$variantId";
     $client = $this->httpClient;
 
     try {

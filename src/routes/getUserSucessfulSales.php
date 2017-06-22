@@ -25,6 +25,7 @@ $app->post('/api/Gumroad/getUserSucessfulSales', function ($request, $response) 
     $query_str = $settings['api_url'] . "sales";
     $client = $this->httpClient;
 
+
     try {
         $resp = $client->get($query_str, [
             'query' => $data
