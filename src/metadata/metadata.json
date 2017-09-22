@@ -14,6 +14,11 @@
       "accessToken"
     ]
   },
+  "steps": [
+    "To start using the Gumroad API, you'll need to register as a developer (https://gumroad.com/settings#advanced)",
+    "Then register your OAuth application (https://gumroad.com/settings/advanced#application-form)",
+    "Generate access token on your application page"
+  ],
   "blocks": [
     {
       "name": "getUserProducts",
